@@ -1,0 +1,35 @@
+#ifndef boxm2_ocl_test_utils_h
+#define boxm2_ocl_test_utils_h
+
+//:
+// \file
+// \brief 
+// \author Isabel Restrepo mir@lems.brown.edu
+// \date  4/16/12
+//
+// \verbatim
+//  Modifications
+//   <none yet>
+// \endverbatim
+
+#include <boxm2/boxm2_scene.h>
+#include <vnl/vnl_random.h>
+class boxm2_ocl_test_utils
+{
+  
+public:
+  static void create_edge_scene(boxm2_scene* scene, float val1, float val2);
+  static void print_alpha_scene(boxm2_scene* scene);
+  template<class T> static void  fill_random(T *b, T *e, vnl_random &rng) ; 
+  static void clean_up();
+  
+protected:
+  
+};
+template< class T>
+void boxm2_ocl_test_utils::fill_random(T *b, T *e, vnl_random &rng)
+{ 
+  for (T *p=b; p<e; ++p) 
+    *p = (T)rng.drand64(-1.0, +1.0); 
+}
+#endif
