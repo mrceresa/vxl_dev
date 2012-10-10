@@ -360,6 +360,7 @@ SET( vcl_sources
 #AUX_SOURCE_DIRECTORY(Templates vcl_sources)
 
 ADD_LIBRARY(vcl ${vcl_sources})
+SET_TARGET_PROPERTIES(vcl PROPERTIES ${VCL_LIBRARY_PROPERTIES})
 
 # CMake can automatically figure out the compiler characteristics on
 # Windows too.  No need to do manual config.

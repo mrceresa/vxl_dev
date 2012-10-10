@@ -29,6 +29,7 @@ SET( testlib_sources
 )
 
 ADD_LIBRARY( testlib ${testlib_sources} )
+SET_TARGET_PROPERTIES(testlib PROPERTIES ${TESTLIB_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( testlib vcl )
 INSTALL_TARGETS( /lib testlib)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/core/testlib ${testlib_sources})
