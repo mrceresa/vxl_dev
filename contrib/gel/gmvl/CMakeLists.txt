@@ -21,6 +21,7 @@ SET(gmvl_sources
 AUX_SOURCE_DIRECTORY(Templates gmvl_sources)
 
 ADD_LIBRARY(gmvl ${gmvl_sources})
+SET_TARGET_PROPERTIES(gmvl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib gmvl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/gel/gmvl ${gmvl_sources})
 TARGET_LINK_LIBRARIES(gmvl vtol vil1 vnl vbl vcl)

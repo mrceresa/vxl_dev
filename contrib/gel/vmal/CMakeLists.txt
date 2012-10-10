@@ -37,6 +37,7 @@ AUX_SOURCE_DIRECTORY(Templates vmal_sources)
 
 
 ADD_LIBRARY(vmal ${vmal_sources})
+SET_TARGET_PROPERTIES(vmal PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vmal)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/gel/vmal ${vmal_sources})
 

@@ -44,6 +44,7 @@ SET( vgl_algo_sources
 AUX_SOURCE_DIRECTORY(Templates vgl_algo_sources)
 
 ADD_LIBRARY(vgl_algo ${vgl_algo_sources})
+SET_TARGET_PROPERTIES(vgl_algo PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vgl_algo vgl vnl_algo vnl )
 
 INSTALL_TARGETS(/lib vgl_algo)

@@ -26,6 +26,7 @@ SET(vdtop_sources
 )
 
 ADD_LIBRARY(vdtop ${vdtop_sources})
+SET_TARGET_PROPERTIES(vdtop PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vdtop)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/prip/vdtop ${vdtop_sources})
 TARGET_LINK_LIBRARIES(vdtop vmap vil)

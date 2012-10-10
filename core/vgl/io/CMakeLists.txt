@@ -29,6 +29,7 @@ SET(vgl_io_sources
 AUX_SOURCE_DIRECTORY(Templates vgl_io_sources)
 
 ADD_LIBRARY(vgl_io ${vgl_io_sources})
+SET_TARGET_PROPERTIES(vgl_io PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vgl_io vgl vsl )
 
 INSTALL_TARGETS(/lib vgl_io)

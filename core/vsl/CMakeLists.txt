@@ -36,6 +36,7 @@ SET(vsl_sources
 AUX_SOURCE_DIRECTORY(Templates vsl_sources)
 
 ADD_LIBRARY(vsl ${vsl_sources})
+SET_TARGET_PROPERTIES(vsl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vsl vcl )
 
 INSTALL_TARGETS(/lib vsl)

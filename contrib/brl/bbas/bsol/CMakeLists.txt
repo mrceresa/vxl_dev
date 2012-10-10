@@ -24,6 +24,7 @@ SET(bsol_sources
 AUX_SOURCE_DIRECTORY(Templates bsol_sources)
 
 ADD_LIBRARY(bsol ${bsol_sources})
+SET_TARGET_PROPERTIES(bsol PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bsol)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bsol ${bsol_sources})
 TARGET_LINK_LIBRARIES(bsol vsol vgl_algo vgl vnl vbl)

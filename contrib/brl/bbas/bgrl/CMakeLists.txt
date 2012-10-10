@@ -19,6 +19,7 @@ SET(bgrl_sources
 AUX_SOURCE_DIRECTORY(Templates bgrl_sources)
 
 ADD_LIBRARY(bgrl ${bgrl_sources})
+SET_TARGET_PROPERTIES(bgrl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bgrl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bgrl ${bgrl_sources})
 

@@ -17,6 +17,7 @@ SET(gst_sources
 AUX_SOURCE_DIRECTORY(Templates gst_sources)
 
 ADD_LIBRARY(gst ${gst_sources})
+SET_TARGET_PROPERTIES(gst PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib gst)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/gel/gst ${gst_sources})
 

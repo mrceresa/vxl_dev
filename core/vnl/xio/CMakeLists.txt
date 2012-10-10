@@ -11,6 +11,7 @@ SET(vnl_xio_sources
 AUX_SOURCE_DIRECTORY(Templates vnl_xio_sources)
 
 ADD_LIBRARY(vnl_xio ${vnl_xio_sources} )
+SET_TARGET_PROPERTIES(vnl_xio PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vnl_xio vnl vsl )
 
 INSTALL_TARGETS(/lib vnl_xio)

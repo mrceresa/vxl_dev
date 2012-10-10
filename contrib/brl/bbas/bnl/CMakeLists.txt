@@ -8,6 +8,7 @@ SET(bnl_sources
    )
 
 ADD_LIBRARY(bnl ${bnl_sources})
+SET_TARGET_PROPERTIES(bnl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bnl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bnl ${bnl_sources})
 

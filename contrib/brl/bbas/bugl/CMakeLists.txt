@@ -26,6 +26,7 @@ SET(bugl_sources
 AUX_SOURCE_DIRECTORY(Templates bugl_sources)
 
 ADD_LIBRARY(bugl ${bugl_sources})
+SET_TARGET_PROPERTIES(bugl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bugl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bugl ${bugl_sources})
 TARGET_LINK_LIBRARIES(bugl vnl vgl_algo vgl vbl)

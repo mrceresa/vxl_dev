@@ -16,6 +16,7 @@ SET(ipts_sources
 )
 
 ADD_LIBRARY(ipts ${ipts_sources})
+SET_TARGET_PROPERTIES(ipts PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib ipts)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/mul/ipts ${ipts_sources})
 TARGET_LINK_LIBRARIES(ipts vimt_algo vimt vgl vil_algo vil)

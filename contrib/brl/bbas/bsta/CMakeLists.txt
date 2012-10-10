@@ -62,6 +62,7 @@ SET(bsta_sources
 
 AUX_SOURCE_DIRECTORY(Templates bsta_sources)
 ADD_LIBRARY(bsta  ${bsta_sources})
+SET_TARGET_PROPERTIES(bsta PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bsta)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/bsta ${bsta_sources})
 
