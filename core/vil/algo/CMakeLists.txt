@@ -58,6 +58,7 @@ AUX_SOURCE_DIRECTORY(Templates vil_algo_sources)
 
 ADD_LIBRARY(vil_algo ${vil_algo_sources})
 
+SET_TARGET_PROPERTIES(vil_algo PROPERTIES ${VIL_ALGO_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vil_algo vil vnl_algo vnl vcl )
 
 INSTALL_TARGETS(/lib vil_algo)
