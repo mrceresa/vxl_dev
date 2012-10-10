@@ -54,11 +54,13 @@ IF(COIN3D_FOUND)
 
       FIND_PATH(SIMVOLEON_INCLUDE_DIR VolumeViz/nodes/SoVolumeRender.h
         /usr/include
+        /usr/include/Coin2
         /usr/local/include
       )
 
       FIND_LIBRARY(SIMVOLEON_LIBRARY SimVoleon
         /usr/lib
+        /usr/lib64
         /usr/local/lib
       )   
 
