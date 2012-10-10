@@ -8,6 +8,7 @@
 FIND_PATH(XERCES_BXML_INCLUDE_PATH dom/DOM.hpp
           ${vxl_SOURCE_DIR}/../xerces-c-src1_4_0/include
           /usr/local/xerces-c-src1_4_0/include
+          /usr/include/xercesc
           ${vxl_SOURCE_DIR}/v3p/xerces-c-src1_4_0/include
 )
 
@@ -29,10 +30,13 @@ ENDIF(XERCES_BXML_INCLUDE_PATH)
 
 # this line used for transit phase
 FIND_PATH(XERCES_NEW_BXML_INCLUDE_PATH xercesc/dom/Dom.hpp
+          /usr/include
           ${vxl_SOURCE_DIR}/../xerces-c2_2_0/include
 )
 
 FIND_LIBRARY(XERCES_NEW_BXML_LIBRARY_PATH xerces-c_2
+          /usr/lib
+          /usr/lib64
           ${vxl_SOURCE_DIR}/../xerces-c2_2_0/lib
           ${vxl_BINARY_DIR}/v3p/lib
 )
