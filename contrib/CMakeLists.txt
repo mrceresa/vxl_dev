@@ -18,7 +18,7 @@ IF( EXISTS ${vxl_SOURCE_DIR}/contrib/mul/CMakeLists.txt )
 ENDIF( EXISTS ${vxl_SOURCE_DIR}/contrib/mul/CMakeLists.txt )
 
 IF( EXISTS ${vxl_SOURCE_DIR}/contrib/oul/CMakeLists.txt )
-  OPTION(BUILD_OUL "Build the Otago University library package?" YES)
+  OPTION(BUILD_OUL "Build the Otago University library package?" NO)
 ENDIF( EXISTS ${vxl_SOURCE_DIR}/contrib/oul/CMakeLists.txt )
 
 IF( EXISTS ${vxl_SOURCE_DIR}/contrib/prip/CMakeLists.txt )
