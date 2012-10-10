@@ -50,7 +50,7 @@ bool bmsh3d_load_ply (bmsh3d_mesh* M, const char* file)
   parsed_mesh.mesh = M;
 
   // OPEN file
-  p_ply ply = ply_open(file, NULL, 0, NULL);
+  p_ply ply = ply_open(file, NULL);
   if (!ply)
     return false;
 
@@ -92,7 +92,7 @@ bool bmsh3d_load_ply_v (bmsh3d_mesh* M, const char* file)
   parsed_mesh.mesh = M;
 
   // OPEN file
-  p_ply ply = ply_open(file, NULL, 0, NULL);
+  p_ply ply = ply_open(file, NULL);
   if (!ply)
     return false;
 
@@ -242,7 +242,7 @@ bool bmsh3d_save_ply (bmsh3d_mesh* M, const char* file, bool ascii_mode, vcl_str
   e_ply_storage_mode storage_mode = (ascii_mode) ? PLY_ASCII : PLY_LITTLE_ENDIAN;
 
   // OPEN FILE
-  p_ply oply = ply_create(file, storage_mode, NULL, 0, NULL);
+  p_ply oply = ply_create(file, storage_mode,NULL);
 
   vcl_cerr << "  saving " << file << " :\n\t"
            << M->vertexmap().size() << " points, "
