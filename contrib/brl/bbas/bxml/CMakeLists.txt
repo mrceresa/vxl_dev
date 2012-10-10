@@ -12,7 +12,7 @@ SET( bxml_sources
     bxml_find.cxx                bxml_find.h
 )
 
-INCLUDE( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
 
 IF(EXPAT_FOUND)
  IF(EXPATPP_FOUND)
