@@ -16,10 +16,10 @@ MARK_AS_ADVANCED( VXL_FORCE_B3P_EXPAT )
 SUBDIRS(expat)
 SUBDIRS(expatpp)
 
-OPTION( VXL_FORCE_B3P_SHAPELIB "Use B3P instead of any native SHAPELIB library?" YES)
+OPTION( VXL_FORCE_B3P_SHAPELIB "Use B3P instead of any native SHAPELIB library?" NO)
 MARK_AS_ADVANCED( VXL_FORCE_B3P_SHAPELIB )
 SUBDIRS(shapelib)
 
-SUBDIRS(minizip)
+#SUBDIRS(minizip)
 
 
