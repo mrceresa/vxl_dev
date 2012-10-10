@@ -1,8 +1,10 @@
 # This is bbas/bmsh3d/algo/CMakeLists.txt
 # Brown 3D Mesh Algorithm Library
 
+FIND_PACKAGE(rply REQUIRED)
+
 INCLUDE_DIRECTORIES( ${BRL_INCLUDE_DIR} )
-INCLUDE_DIRECTORIES( ${VTHREEP_INCLUDE_DIR}/rply )
+INCLUDE_DIRECTORIES( ${RPLY_INCLUDE_DIR} )
 
 SET( bmsh3d_algo_sources
   bmsh3d_fileio.cxx           bmsh3d_fileio.h
@@ -13,7 +15,7 @@ SET( bmsh3d_algo_sources
 )
 
 ADD_LIBRARY( bmsh3d_algo  ${bmsh3d_algo_sources})
-TARGET_LINK_LIBRARIES( bmsh3d_algo bmsh3d rply vgl vnl vul)
+TARGET_LINK_LIBRARIES( bmsh3d_algo bmsh3d ${RPLY_LIBRARY} vgl vnl vul)
 
 IF( BUILD_TESTING )
   SUBDIRS(tests)
