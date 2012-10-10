@@ -19,6 +19,7 @@ SET(btol_sources
 )
 
 ADD_LIBRARY(btol ${btol_sources})
+SET_TARGET_PROPERTIES(btol PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib btol)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/btol ${btol_sources})
 

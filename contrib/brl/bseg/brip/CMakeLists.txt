@@ -40,6 +40,7 @@ SET(brip_sources
 AUX_SOURCE_DIRECTORY(Templates brip_sources)
 
 ADD_LIBRARY(brip ${brip_sources})
+SET_TARGET_PROPERTIES(brip PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib brip)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bseg/brip ${brip_sources})
 

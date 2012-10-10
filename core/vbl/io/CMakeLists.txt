@@ -17,6 +17,7 @@ SET(vbl_io_sources
 AUX_SOURCE_DIRECTORY(Templates vbl_io_sources)
 
 ADD_LIBRARY(vbl_io ${vbl_io_sources})
+SET_TARGET_PROPERTIES(vbl_io PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vbl_io vbl vsl )
 
 INSTALL_TARGETS(/lib vbl_io)

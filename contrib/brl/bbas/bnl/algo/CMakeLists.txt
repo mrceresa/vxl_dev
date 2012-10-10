@@ -5,6 +5,7 @@ SET( bnl_algo_sources
 )
 
 ADD_LIBRARY( bnl_algo ${bnl_algo_sources} )
+SET_TARGET_PROPERTIES(bnl_algo PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bnl_algo)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bnl/algo ${bnl_algo_sources})
 TARGET_LINK_LIBRARIES( bnl_algo vnl )

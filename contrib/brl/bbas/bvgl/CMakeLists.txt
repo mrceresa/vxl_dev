@@ -38,6 +38,7 @@ ENDIF(EXPAT_FOUND)
 
 #Create BVGL library
 ADD_LIBRARY(bvgl ${bvgl_sources})
+SET_TARGET_PROPERTIES(bvgl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bvgl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bvgl ${bvgl_sources})
 TARGET_LINK_LIBRARIES(bvgl vsol vgl_algo vgl_io vgl vnl_algo vnl vil vbl)

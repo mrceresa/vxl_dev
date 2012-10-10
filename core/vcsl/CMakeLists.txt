@@ -63,6 +63,7 @@ doxygen_add_library(core/vcsl
   AUX_SOURCE_DIRECTORY( Templates vcsl_sources )
 
   ADD_LIBRARY( vcsl ${vcsl_sources} )
+  SET_TARGET_PROPERTIES(vcsl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
   TARGET_LINK_LIBRARIES( vcsl vnl vbl )
 
   INSTALL_TARGETS(/lib vcsl)

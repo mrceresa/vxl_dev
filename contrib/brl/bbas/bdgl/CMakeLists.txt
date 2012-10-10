@@ -20,6 +20,7 @@ SET(bdgl_sources
 )
 
 ADD_LIBRARY(bdgl ${bdgl_sources})
+SET_TARGET_PROPERTIES(bdgl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib bdgl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/brl/bbas/bdgl ${bdgl_sources})
 

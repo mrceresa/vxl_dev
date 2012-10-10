@@ -5,6 +5,7 @@ SET(vul_io_sources
 )
 
 ADD_LIBRARY(vul_io ${vul_io_sources})
+SET_TARGET_PROPERTIES(vul_io PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES(vul_io vul vsl)
 
 INSTALL_TARGETS(/lib vul_io)

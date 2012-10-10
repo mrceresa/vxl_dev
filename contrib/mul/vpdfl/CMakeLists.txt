@@ -37,6 +37,7 @@ SET(vpdfl_sources
 AUX_SOURCE_DIRECTORY(Templates vpdfl_sources)
 
 ADD_LIBRARY(vpdfl ${vpdfl_sources})
+SET_TARGET_PROPERTIES(vpdfl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vpdfl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/mul/vpdfl ${vpdfl_sources})
 TARGET_LINK_LIBRARIES(vpdfl mbl vnl_algo vnl_io vnl vsl vul)

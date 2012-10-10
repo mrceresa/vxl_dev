@@ -121,6 +121,7 @@ IF(CMAKE_COMPILER_IS_GNUCXX)
 ENDIF(CMAKE_COMPILER_IS_GNUCXX)
 
 ADD_LIBRARY(mbl ${mbl_sources})
+SET_TARGET_PROPERTIES(mbl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES(mbl vnl_io vnl_algo vgl_io vgl vbl_io vil_io vsl vnl vil vul vbl)
 
 INSTALL_TARGETS(/lib mbl)

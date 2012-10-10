@@ -42,6 +42,7 @@ SET( vbl_sources
 AUX_SOURCE_DIRECTORY(Templates vbl_sources)
 
 ADD_LIBRARY(vbl ${vbl_sources})
+SET_TARGET_PROPERTIES(vbl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vbl vcl )
 
 INSTALL_TARGETS(/lib vbl)

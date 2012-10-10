@@ -45,6 +45,7 @@ SET(osl_sources
 AUX_SOURCE_DIRECTORY(Templates osl_sources)
 
 ADD_LIBRARY(osl ${osl_sources})
+SET_TARGET_PROPERTIES(osl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib osl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/oxl/osl ${osl_sources})
 TARGET_LINK_LIBRARIES(osl vnl_algo vnl vgl vil1 vbl)

@@ -25,6 +25,7 @@ IF(NETLIB_FOUND)
 ENDIF(NETLIB_FOUND)
 
 ADD_LIBRARY(gtrl ${gtrl_sources})
+SET_TARGET_PROPERTIES(gtrl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib gtrl)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/gel/gtrl ${gtrl_sources})
 

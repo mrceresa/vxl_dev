@@ -49,6 +49,7 @@ SET(vil3d_sources
 AUX_SOURCE_DIRECTORY(Templates vil3d_sources)
 
 ADD_LIBRARY(vil3d ${vil3d_sources})
+SET_TARGET_PROPERTIES(vil3d PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vil3d vil vul vsl vcl vnl )
 
 INSTALL_TARGETS(/lib vil3d)

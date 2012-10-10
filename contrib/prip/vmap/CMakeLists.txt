@@ -28,6 +28,7 @@ SET(vmap_sources
 )
 
 ADD_LIBRARY(vmap ${vmap_sources})
+SET_TARGET_PROPERTIES(vmap PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vmap)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/contrib/prip/vmap ${vmap_sources})
 TARGET_LINK_LIBRARIES(vmap vcl)

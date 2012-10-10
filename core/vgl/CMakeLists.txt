@@ -69,6 +69,7 @@ ENDIF( BUILD_NONCOMMERCIAL )
 AUX_SOURCE_DIRECTORY(Templates vgl_sources)
 
 ADD_LIBRARY(vgl ${vgl_sources})
+SET_TARGET_PROPERTIES(vgl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vgl vcl )
 doxygen_add_library(core/vgl
   #DEPENDS core/vsl core/vnl
