@@ -102,6 +102,7 @@ IF(NETLIB_FOUND)
   AUX_SOURCE_DIRECTORY(Templates vnl_algo_sources)
 
   ADD_LIBRARY( vnl_algo ${vnl_algo_sources})
+  SET_TARGET_PROPERTIES(vnl_algo PROPERTIES ${VNL_ALGO_LIBRARY_PROPERTIES})
   TARGET_LINK_LIBRARIES( vnl_algo ${NETLIB_LIBRARIES} vnl )
 
   INSTALL_TARGETS(/lib vnl_algo)
