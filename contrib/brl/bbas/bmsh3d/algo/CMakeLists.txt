@@ -4,7 +4,7 @@
 FIND_PACKAGE(rply REQUIRED)
 
 INCLUDE_DIRECTORIES( ${BRL_INCLUDE_DIR} )
-INCLUDE_DIRECTORIES( ${RPLY_INCLUDE_DIR} )
+INCLUDE_DIRECTORIES( /usr/include/rply )
 
 SET( bmsh3d_algo_sources
   bmsh3d_fileio.cxx           bmsh3d_fileio.h
