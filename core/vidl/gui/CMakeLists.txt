@@ -12,6 +12,7 @@ SET(vidl_gui_sources
    )
 
 ADD_LIBRARY(vidl_gui ${vidl_gui_sources})
+SET_TARGET_PROPERTIES(vidl_gui PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vidl_gui)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/core/vidl/gui ${vidl_gui_sources})
 TARGET_LINK_LIBRARIES( vidl_gui vidl vgui vil )

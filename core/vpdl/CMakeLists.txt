@@ -48,6 +48,7 @@ SET( vpdl_sources
 AUX_SOURCE_DIRECTORY(Templates vpdl_sources)
 
 ADD_LIBRARY(vpdl ${vpdl_sources})
+SET_TARGET_PROPERTIES(vpdl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vpdl vnl_algo vnl )
 
 INSTALL_TARGETS(/lib vpdl)

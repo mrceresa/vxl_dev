@@ -518,6 +518,7 @@ SET( vgui_sources ${vgui_sources}
 )
 
 ADD_LIBRARY(vgui ${vgui_sources})
+SET_TARGET_PROPERTIES(vgui PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 INSTALL_TARGETS(/lib vgui)
 INSTALL_NOBASE_HEADER_FILES(/include/vxl/core/vgui ${vgui_sources})
 SET( VGUI_FOUND "YES" CACHE INTERNAL "Was vgui successfully built?" )
