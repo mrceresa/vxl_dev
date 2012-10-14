@@ -29,6 +29,7 @@ SET( vpgl_algo_sources
 AUX_SOURCE_DIRECTORY(Templates vpgl_algo_sources)
 
 ADD_LIBRARY(vpgl_algo ${vpgl_algo_sources})
+SET_TARGET_PROPERTIES(vpgl_algo PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 
 TARGET_LINK_LIBRARIES(vpgl_algo vpgl vpgl_file_formats vgl_algo vnl_algo vnl vgl vil vul vbl)
 

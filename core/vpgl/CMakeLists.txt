@@ -32,6 +32,7 @@ SET( vpgl_sources
 AUX_SOURCE_DIRECTORY(Templates vpgl_sources)
 
 ADD_LIBRARY(vpgl ${vpgl_sources})
+SET_TARGET_PROPERTIES(vpgl PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES(vpgl vnl_algo vnl vgl_algo vgl vul vsl vbl)
 
 IF( BUILD_TESTING )

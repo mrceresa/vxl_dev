@@ -21,7 +21,7 @@ IF(TIFF_FOUND)
 ENDIF(TIFF_FOUND)
 
 ADD_LIBRARY(vpgl_file_formats ${vpgl_file_formats_sources})
-
+SET_TARGET_PROPERTIES(vpgl_file_formats PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES(vpgl_file_formats vpgl vil vnl)
 
 IF( BUILD_TESTING )

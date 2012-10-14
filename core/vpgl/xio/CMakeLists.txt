@@ -5,6 +5,7 @@ SET(vpgl_xio_sources
 )
 
 ADD_LIBRARY(vpgl_xio ${vpgl_xio_sources} )
+SET_TARGET_PROPERTIES(vpgl_xio PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 TARGET_LINK_LIBRARIES( vpgl_xio vpgl vsl )
 
 INSTALL_TARGETS(/lib vpgl_xio)

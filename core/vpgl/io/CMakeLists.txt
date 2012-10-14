@@ -13,6 +13,7 @@ SET(vpgl_io_sources
 AUX_SOURCE_DIRECTORY(Templates vpgl_io_sources)
 
 ADD_LIBRARY(vpgl_io ${vpgl_io_sources})
+SET_TARGET_PROPERTIES(vpgl_io PROPERTIES ${VXL_LIBRARY_PROPERTIES})
 
 TARGET_LINK_LIBRARIES(vpgl_io vsl vpgl vnl vgl vgl_algo vgl_io vnl_io vbl_io)
 
