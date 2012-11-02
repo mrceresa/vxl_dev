@@ -90,5 +90,5 @@ SUBDIRS(bcvr)
 SUBDIRS(bkml)
 
 # volumetric matching tools
-SUBDIRS(volm)
+#SUBDIRS(volm)
 
