@@ -5,6 +5,7 @@
 
 #include <vcl_iostream.h>
 #include <vcl_fstream.h>
+#include <vcl_cstdio.h>
 #include <vpgl/vpgl_camera_double_sptr.h>
 #include <vpgl/vpgl_perspective_camera.h>
 #include <vpgl/io/vpgl_io_perspective_camera.h>
