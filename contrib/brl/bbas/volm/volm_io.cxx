@@ -11,6 +11,7 @@
 #include <bsol/bsol_algs.h>
 #include <vcl_iostream.h>
 #include <vcl_iomanip.h>
+#include <vcl_cstdio.h>
 
 //:
 // \file
