@@ -2,7 +2,7 @@
 #ifndef bvgl_labelme_parser_h_
 #define bvgl_labelme_parser_h_
 
-#include <expatpplib.h>
+#include <expatpp.h>
 #include <vcl_string.h>
 #include <vcl_sstream.h>
 #include <vgl/vgl_polygon.h>
